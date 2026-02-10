@@ -16,19 +16,22 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-    # networks:
-    #   - eyetap-main
 
   backend:
     image: eyetap/backend
+    depends_on: 
+      - postgres
     container_name: eyetap-backend
     build:
       context: backend
       dockerfile: ../backend.Dockerfile
     ports:
       - "8080:8080"
-    # networks:
-    #   - eyetap-main
+    healthcheck:
+      test: [ "CMD", "curl", "-sf", "http://127.0.0.1:8080/health" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/eyetap
 
