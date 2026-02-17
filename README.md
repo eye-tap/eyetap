@@ -4,7 +4,7 @@
 </div>
 
 A platform to connect gaze points to bounding boxes of texts.
-Deployed version can be found [here](https://group-p23.webdev-25.ivia.isginf.ch/)
+Deployed version can be found [here](https://eyetap.ivia.ch/)
 *NOTE: Not true anymore, will be updated in the future*
 
 ## Monorepo
