@@ -18,8 +18,8 @@ services:
       retries: 5
 
   backend:
-    image: ghcr.io/eyetap/backend
-    depends_on:
+    image: eyetap/backend
+    depends_on: 
       - postgres
     container_name: eyetap-backend
     build:
@@ -34,21 +34,6 @@ services:
       retries: 5
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/eyetap
-      SPRING_DATASOURCE_USERNAME: eyetap
-      SPRING_DATASOURCE_PASSWORD: eyetap
-
-  frontend:
-    image: ghcr.io/eyetap/frontend
-    depends_on:
-      - postgres
-    container_name: eyetap-frontend
-    ports:
-      - "8081:3000"
-    healthcheck:
-      test: [ "CMD", "curl", "-sf", "http://127.0.0.1:3000" ]
-      interval: 10s
-      timeout: 10s
-      retries: 5
 
 volumes:
   postgres_data:

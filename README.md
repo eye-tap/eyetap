@@ -5,9 +5,14 @@
 
 A platform to connect gaze points to bounding boxes of texts.
 Deployed version can be found [here](https://eyetap.ivia.ch/)
-*NOTE: Not true anymore, will be updated in the future*
+
+# Installation
+The `docker-compose.yml` provided in the main folder in this repo is configured to pull in the latest docker containers provided by this project.
+
+Run `docker compose up` in the root folder of this repository
 
 ## Monorepo
+To run the backend for development, run `docker compose up` in the `/dev` folder
 This repo uses submodules to pull in the frontend and backend.
 So, when cloning, use
 ```git clone --recursive https://github.com/eye-tap/eyetap```
