@@ -1,6 +1,6 @@
 <div id="title" align="center">
     <img src="./assets/favicon-logo.jpg" width="300">
-    <h1>Eye-TAP</h1>
+    <h1>EYE-TAP</h1>
 </div>
 
 A platform to connect gaze points to bounding boxes of texts.
@@ -27,7 +27,7 @@ and you can pull changes to them using either the provided `update-repo.sh` scri
 ## License
 
 EYE-TAP
-Copyright (C) 2026  eyetap contributors
+Copyright (C) 2026  EYE-TAP contributors
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
