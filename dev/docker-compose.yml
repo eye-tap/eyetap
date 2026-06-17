@@ -20,7 +20,9 @@ services:
   backend:
     image: eyetap/backend
     depends_on: 
-      - postgres
+      postgres:
+        condition: service_healthy
+        restart: false
     container_name: eyetap-backend
     build:
       context: backend
