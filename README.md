@@ -7,9 +7,15 @@ A platform to connect gaze points to bounding boxes of texts.
 Deployed version can be found [here](https://eyetap.ivia.ch/)
 
 # Installation
+## Docker
 The `docker-compose.yml` provided in the main folder in this repo is configured to pull in the latest docker containers provided by this project.
 
 Run `docker compose up` in the root folder of this repository
+
+## Kubernetes / Helm
+Clone the [helm chart repo](https://github.com/eye-tap/helm-chart) and either run the `kube-deploy.sh` script,
+or use one of the provided CI pipelines (for GitHub Actions and Gitlab CI) to create a deployment.
+
 
 ## Monorepo
 To run the backend for development, run `docker compose up` in the `/dev` folder
